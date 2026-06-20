@@ -8,7 +8,7 @@ cloudflared_conf="/usr/local/etc/cloudflared/config.yml"
 {% endif %}
 cloudflared_env="{{ ns.env }}"
 {% endif %}
-cloudflared_mode_options="run"
+cloudflared_mode_options="run{% if helpers.exists('OPNsense.Cloudflared.general.icmpv4_src') and OPNsense.Cloudflared.general.icmpv4_src != '' %} --icmpv4-src={{ OPNsense.Cloudflared.general.icmpv4_src|trim }}{% endif %}{% if helpers.exists('OPNsense.Cloudflared.general.icmpv6_src') and OPNsense.Cloudflared.general.icmpv6_src != '' %} --icmpv6-src={{ OPNsense.Cloudflared.general.icmpv6_src|trim }}{% endif %}"
 {% else %}
 cloudflared_enable="NO"
 {% endif %}

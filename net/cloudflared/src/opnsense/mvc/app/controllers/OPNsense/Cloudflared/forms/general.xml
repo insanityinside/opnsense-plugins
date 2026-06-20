@@ -50,4 +50,24 @@
         <type>dropdown</type>
         <help>Verbosity of cloudflared logging. Defaults to info. Use debug for troubleshooting; warn or error for quieter operation.</help>
     </field>
+    <field>
+        <type>header</type>
+        <label>ICMP Proxy</label>
+        <static>true</static>
+        <advanced>true</advanced>
+    </field>
+    <field>
+        <id>cloudflared.general.icmpv4_src</id>
+        <label>ICMPv4 Source Address</label>
+        <type>text</type>
+        <advanced>true</advanced>
+        <help>Source IPv4 address for ICMP proxy traffic.</help>
+    </field>
+    <field>
+        <id>cloudflared.general.icmpv6_src</id>
+        <label>ICMPv6 Source Address</label>
+        <type>text</type>
+        <advanced>true</advanced>
+        <help>Source IPv6 address for ICMP proxy traffic.</help>
+    </field>
 </form>

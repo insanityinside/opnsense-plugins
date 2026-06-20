@@ -37,6 +37,16 @@
                     <ipv6 value="6">IPv6</ipv6>
                 </OptionValues>
             </edge_ip_version>
+            <icmpv4_src type="TextField">
+                <Required>N</Required>
+                <Mask>/^$|^((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)$/</Mask>
+                <ValidationMessage>Must be a valid IPv4 address or empty.</ValidationMessage>
+            </icmpv4_src>
+            <icmpv6_src type="TextField">
+                <Required>N</Required>
+                <Mask>/^$|^[0-9a-fA-F:]+$/</Mask>
+                <ValidationMessage>Must be a valid IPv6 address or empty.</ValidationMessage>
+            </icmpv6_src>
             <log_level type="OptionField">
                 <Default>info</Default>
                 <Required>Y</Required>
