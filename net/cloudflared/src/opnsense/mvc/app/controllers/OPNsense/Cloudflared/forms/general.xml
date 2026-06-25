@@ -61,13 +61,13 @@
         <label>ICMPv4 Source Address</label>
         <type>text</type>
         <advanced>true</advanced>
-        <help>Source IPv4 address for ICMP proxy traffic.</help>
+        <help>Source IPv4 interface address for ICMP proxy traffic. Set if cloudflared logs show ICMP originating from the wrong address.</help>
     </field>
     <field>
         <id>cloudflared.general.icmpv6_src</id>
         <label>ICMPv6 Source Address</label>
         <type>text</type>
         <advanced>true</advanced>
-        <help>Source IPv6 address for ICMP proxy traffic.</help>
+        <help>Source IPv6 interface address for ICMP proxy traffic. Set if cloudflared logs show ICMP originating from the wrong address.</help>
     </field>
 </form>
